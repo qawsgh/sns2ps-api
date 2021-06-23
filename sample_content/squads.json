@@ -1,0 +1,211 @@
+[
+{
+  "model": "match_ipsc.ipscsquad",
+  "pk": 27462,
+  "fields": {
+    "number": 1,
+    "max_competitors": 12,
+    "comment": "",
+    "registration": "aa",
+    "prematch": false,
+    "_locked": true,
+    "created_by": null,
+    "_created": "2018-08-07T09:33:27.107Z",
+    "updated_by": null,
+    "_updated": "2019-07-01T16:38:18.421Z",
+    "lock_changed_by": 6834,
+    "_lock_changed": "2019-07-01T16:38:18.418Z",
+    "event": 7486
+  }
+},
+{
+  "model": "match_ipsc.ipscsquad",
+  "pk": 27463,
+  "fields": {
+    "number": 2,
+    "max_competitors": 13,
+    "comment": "",
+    "registration": "aa",
+    "prematch": false,
+    "_locked": true,
+    "created_by": null,
+    "_created": "2018-08-07T09:33:27.112Z",
+    "updated_by": null,
+    "_updated": "2019-07-01T16:38:18.427Z",
+    "lock_changed_by": 6834,
+    "_lock_changed": "2019-07-01T16:38:18.425Z",
+    "event": 7486
+  }
+},
+{
+  "model": "match_ipsc.ipscsquad",
+  "pk": 27464,
+  "fields": {
+    "number": 3,
+    "max_competitors": 12,
+    "comment": "",
+    "registration": "aa",
+    "prematch": false,
+    "_locked": true,
+    "created_by": null,
+    "_created": "2018-08-07T09:33:27.117Z",
+    "updated_by": null,
+    "_updated": "2019-07-01T16:38:18.433Z",
+    "lock_changed_by": 6834,
+    "_lock_changed": "2019-07-01T16:38:18.431Z",
+    "event": 7486
+  }
+},
+{
+  "model": "match_ipsc.ipscsquad",
+  "pk": 27465,
+  "fields": {
+    "number": 4,
+    "max_competitors": 12,
+    "comment": "",
+    "registration": "aa",
+    "prematch": false,
+    "_locked": true,
+    "created_by": null,
+    "_created": "2018-08-07T09:33:27.121Z",
+    "updated_by": null,
+    "_updated": "2019-07-01T16:38:18.438Z",
+    "lock_changed_by": 6834,
+    "_lock_changed": "2019-07-01T16:38:18.436Z",
+    "event": 7486
+  }
+},
+{
+  "model": "match_ipsc.ipscsquad",
+  "pk": 27466,
+  "fields": {
+    "number": 5,
+    "max_competitors": 12,
+    "comment": "",
+    "registration": "aa",
+    "prematch": false,
+    "_locked": true,
+    "created_by": null,
+    "_created": "2018-08-07T09:33:27.125Z",
+    "updated_by": null,
+    "_updated": "2019-07-01T16:38:18.443Z",
+    "lock_changed_by": 6834,
+    "_lock_changed": "2019-07-01T16:38:18.441Z",
+    "event": 7486
+  }
+},
+{
+  "model": "match_ipsc.ipscsquad",
+  "pk": 27467,
+  "fields": {
+    "number": 6,
+    "max_competitors": 10,
+    "comment": "Saturday Squad",
+    "registration": "aa",
+    "prematch": true,
+    "_locked": true,
+    "created_by": null,
+    "_created": "2018-08-07T09:33:27.129Z",
+    "updated_by": null,
+    "_updated": "2019-07-01T16:38:18.448Z",
+    "lock_changed_by": 6834,
+    "_lock_changed": "2019-07-01T16:38:18.446Z",
+    "event": 7486
+  }
+},
+{
+  "model": "match_ipsc.ipscsquad",
+  "pk": 27468,
+  "fields": {
+    "number": 7,
+    "max_competitors": 10,
+    "comment": "Saturday Squad",
+    "registration": "aa",
+    "prematch": true,
+    "_locked": true,
+    "created_by": null,
+    "_created": "2018-08-07T09:33:27.133Z",
+    "updated_by": null,
+    "_updated": "2019-07-01T16:38:18.454Z",
+    "lock_changed_by": 6834,
+    "_lock_changed": "2019-07-01T16:38:18.451Z",
+    "event": 7486
+  }
+},
+{
+  "model": "match_ipsc.ipscsquad",
+  "pk": 27470,
+  "fields": {
+    "number": 8,
+    "max_competitors": 10,
+    "comment": "Saturday Squad",
+    "registration": "aa",
+    "prematch": true,
+    "_locked": true,
+    "created_by": null,
+    "_created": "2018-08-07T20:20:56.514Z",
+    "updated_by": null,
+    "_updated": "2019-07-01T16:38:18.459Z",
+    "lock_changed_by": 6834,
+    "_lock_changed": "2019-07-01T16:38:18.457Z",
+    "event": 7486
+  }
+},
+{
+  "model": "match_ipsc.ipscsquad",
+  "pk": 28842,
+  "fields": {
+    "number": 9,
+    "max_competitors": 10,
+    "comment": "Saturday Squad",
+    "registration": "aa",
+    "prematch": true,
+    "_locked": true,
+    "created_by": null,
+    "_created": "2018-11-18T06:48:40.122Z",
+    "updated_by": null,
+    "_updated": "2019-07-01T16:38:18.464Z",
+    "lock_changed_by": 6834,
+    "_lock_changed": "2019-07-01T16:38:18.462Z",
+    "event": 7486
+  }
+},
+{
+  "model": "match_ipsc.ipscsquad",
+  "pk": 32408,
+  "fields": {
+    "number": 10,
+    "max_competitors": 10,
+    "comment": "Saturday Squad",
+    "registration": "aa",
+    "prematch": true,
+    "_locked": true,
+    "created_by": null,
+    "_created": "2019-05-14T04:16:22.415Z",
+    "updated_by": null,
+    "_updated": "2019-07-01T16:38:18.469Z",
+    "lock_changed_by": 6834,
+    "_lock_changed": "2019-07-01T16:38:18.467Z",
+    "event": 7486
+  }
+},
+{
+  "model": "match_ipsc.ipscsquad",
+  "pk": 29748,
+  "fields": {
+    "number": 11,
+    "max_competitors": 10,
+    "comment": "Friday Squad",
+    "registration": "aa",
+    "prematch": true,
+    "_locked": true,
+    "created_by": null,
+    "_created": "2019-02-02T17:03:26.773Z",
+    "updated_by": null,
+    "_updated": "2019-07-01T16:38:18.475Z",
+    "lock_changed_by": 6834,
+    "_lock_changed": "2019-07-01T16:38:18.473Z",
+    "event": 7486
+  }
+}
+]
