@@ -1,0 +1,24 @@
+steps:
+- name: gcr.io/cloud-builders/gcloud
+  entrypoint: 'bash'
+  args: [ '-c', 'gcloud secrets versions access latest --secret=$_DOCKER_TOKEN > docker_token.txt' ]
+- name: 'gcr.io/cloud-builders/docker'
+  entrypoint: 'bash'
+  args: ['-c', 'docker login --username=$_DOCKER_ACCOUNT --password-stdin < docker_token.txt']
+- name: 'ubuntu'
+  entrypoint: 'bash'
+  args:
+  - '-c'
+  - |
+    echo $TAG_NAME | sed -e "s#[^0-9]*\([0-9]*\)[.]\([0-9]*\)[.]\([0-9]*\)\([0-9A-Za-z-]*\)#\1#" > major
+    echo $TAG_NAME | sed -e "s#[^0-9]*\([0-9]*\)[.]\([0-9]*\)[.]\([0-9]*\)\([0-9A-Za-z-]*\)#\2#" > minor
+- name: 'gcr.io/cloud-builders/docker'
+  entrypoint: 'bash'
+  args:
+    - '-c'
+    - |
+      docker build -t $_DOCKER_ACCOUNT/$PROJECT_ID:$TAG_NAME -t $_DOCKER_ACCOUNT/$PROJECT_ID:latest -t $_DOCKER_ACCOUNT/$PROJECT_ID:$(cat major).$(cat minor) -t $_DOCKER_ACCOUNT/$PROJECT_ID:$(cat major) .
+      docker push $_DOCKER_ACCOUNT/$PROJECT_ID:$TAG_NAME
+      docker push $_DOCKER_ACCOUNT/$PROJECT_ID:$(cat major)
+      docker push $_DOCKER_ACCOUNT/$PROJECT_ID:$(cat major).$(cat minor)
+      docker push $_DOCKER_ACCOUNT/$PROJECT_ID:latest
