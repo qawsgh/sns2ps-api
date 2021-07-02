@@ -17,8 +17,8 @@ steps:
   args:
     - '-c'
     - |
-      docker build -t $_DOCKER_ACCOUNT/$PROJECT_ID:$TAG_NAME -t $_DOCKER_ACCOUNT/$PROJECT_ID:latest -t $_DOCKER_ACCOUNT/$PROJECT_ID:$(cat major).$(cat minor) -t $_DOCKER_ACCOUNT/$PROJECT_ID:$(cat major) .
-      docker push $_DOCKER_ACCOUNT/$PROJECT_ID:$TAG_NAME
-      docker push $_DOCKER_ACCOUNT/$PROJECT_ID:$(cat major)
-      docker push $_DOCKER_ACCOUNT/$PROJECT_ID:$(cat major).$(cat minor)
-      docker push $_DOCKER_ACCOUNT/$PROJECT_ID:latest
+      docker build -t $_DOCKER_ACCOUNT/sns2ps-api:$TAG_NAME -t $_DOCKER_ACCOUNT/sns2ps-api:latest -t $_DOCKER_ACCOUNT/sns2ps-api:$(cat major).$(cat minor) -t $_DOCKER_ACCOUNT/sns2ps-api:$(cat major) .
+      docker push $_DOCKER_ACCOUNT/sns2ps-api:$TAG_NAME
+      docker push $_DOCKER_ACCOUNT/sns2ps-api:$(cat major)
+      docker push $_DOCKER_ACCOUNT/sns2ps-api:$(cat major).$(cat minor)
+      docker push $_DOCKER_ACCOUNT/sns2ps-api:latest
