@@ -1,16 +1,8 @@
 steps:
-- name: 'ubuntu'
-  entrypoint: 'bash'
-  args:
-  - '-c'
-  - |
-    echo $TAG_NAME | sed -e "s#[^0-9]*\([0-9]*\)[.]\([0-9]*\)[.]\([0-9]*\)\([0-9A-Za-z-]*\)#\1#" > major
-    echo $TAG_NAME | sed -e "s#[^0-9]*\([0-9]*\)[.]\([0-9]*\)[.]\([0-9]*\)\([0-9A-Za-z-]*\)#\2#" > minor
 - name: 'gcr.io/cloud-builders/docker'
   entrypoint: 'bash'
   args:
     - '-c'
     - |
-      echo "[$SHORT_SHA]"
-      docker build -t gcr.io/sns2ps-api-image-build-217d/sns2ps-api:$SHORT_SHA .
-      docker push gcr.io/sns2ps-api-image-build-217d/sns2ps-api:$SHORT_SHA
+      docker build -t gcr.io/sns2ps-api-image-build-217d/sns2ps-api:$TAG_NAME .
+      docker push gcr.io/sns2ps-api-image-build-217d/sns2ps-api:$TAG_NAME
