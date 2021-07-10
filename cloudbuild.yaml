@@ -1,10 +1,4 @@
 steps:
-- name: gcr.io/cloud-builders/gcloud
-  entrypoint: 'bash'
-  args: [ '-c', 'gcloud secrets versions access latest --secret=$_DOCKER_TOKEN > docker_token.txt' ]
-- name: 'gcr.io/cloud-builders/docker'
-  entrypoint: 'bash'
-  args: ['-c', 'docker login --username=$_DOCKER_ACCOUNT --password-stdin < docker_token.txt']
 - name: 'ubuntu'
   entrypoint: 'bash'
   args:
@@ -17,8 +11,7 @@ steps:
   args:
     - '-c'
     - |
-      docker build -t $_DOCKER_ACCOUNT/sns2ps-api:$TAG_NAME -t $_DOCKER_ACCOUNT/sns2ps-api:latest -t $_DOCKER_ACCOUNT/sns2ps-api:$(cat major).$(cat minor) -t $_DOCKER_ACCOUNT/sns2ps-api:$(cat major) .
-      docker push $_DOCKER_ACCOUNT/sns2ps-api:$TAG_NAME
-      docker push $_DOCKER_ACCOUNT/sns2ps-api:$(cat major)
-      docker push $_DOCKER_ACCOUNT/sns2ps-api:$(cat major).$(cat minor)
-      docker push $_DOCKER_ACCOUNT/sns2ps-api:latest
+      docker build -t gcr.io/sns2ps-api:$TAG_NAME -t $_DOCKER_ACCOUNT/sns2ps-api:latest -t $_DOCKER_ACCOUNT/sns2ps-api:$(cat major).$(cat minor) -t $_DOCKER_ACCOUNT/sns2ps-api:$(cat major) .
+      docker push gcr.io/sns2ps-api-image-build-217d/sns2ps-api:$TAG_NAME
+      docker push gcr.io/sns2ps-api-image-build-217d/sns2ps-api:$(cat major)
+      docker push gcr.io/sns2ps-api-image-build-217d/sns2ps-api:$(cat major).$(cat minor)
