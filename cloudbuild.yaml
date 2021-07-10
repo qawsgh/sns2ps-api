@@ -11,6 +11,6 @@ steps:
   args:
     - '-c'
     - |
-      echo "[$TAG_NAME]"
-      docker build -t gcr.io/sns2ps-api-image-build-217d/sns2ps-api:$TAG_NAME .
-      # docker push gcr.io/sns2ps-api-image-build-217d/sns2ps-api:$TAG_NAME
+      echo "[$SHORT_SHA]"
+      docker build -t gcr.io/sns2ps-api-image-build-217d/sns2ps-api:$SHORT_SHA .
+      # docker push gcr.io/sns2ps-api-image-build-217d/sns2ps-api:$SHORT_SHA
